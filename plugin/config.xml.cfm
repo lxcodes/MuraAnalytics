@@ -35,20 +35,20 @@
       <setting>
         <name>GoogleAnalyticsGATrackingID</name>
         <label>Google Analytics Tracking ID (ga.js)</label>
-        <type>TextBox</type>
+        <type>text</type>
         <required>false</required>
       </setting>
       <setting>
         <name>GoogleAnalyticsAJTrackingID</name>
         <label>Google Analytics Tracking ID (analytics.js)</label>
-        <type>TextBox</type>
+        <type>text</type>
         <required>false</required>
       </setting>
       <setting>
         <name>GoogleAnalyticsJSExtras</name>
         <label>Google Analytics Extras</label>
         <hint>This can be any commands associated with ga()</hint>
-        <type>TextBox</type>
+        <type>textArea</type>
         <required>false</required>
       </setting>
 		</settings>
