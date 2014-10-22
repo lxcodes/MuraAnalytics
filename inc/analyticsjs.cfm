@@ -6,6 +6,7 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', '#google_analyticsjs_tracking#', 'auto');
+    #google_analyticsjs_extra#
     ga('send', 'pageview');
   </script>
 </cfoutput>

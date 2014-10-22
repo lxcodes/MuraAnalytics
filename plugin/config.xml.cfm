@@ -51,6 +51,17 @@
 				<message></message>
 				<defaultvalue></defaultvalue>
 			</setting>
+      <setting>
+				<name>GoogleAnalyticsJSExtras</name>
+				<label>Google Analytics Extras</label>
+				<hint>This can be any commands associated with 'ga()'</hint>
+				<type>HTMLEditor</type>
+				<required>false</required>
+				<validation></validation>
+				<regex></regex>
+				<message></message>
+				<defaultvalue></defaultvalue>
+			</setting>
 		</settings>
 		<eventHandlers>
 			<eventHandler

@@ -13,6 +13,7 @@ component name='eventHandler' accessors='true' extends='mura.plugin.pluginGeneri
     var html = '';
     var google_gajs_tracking = variables.pluginConfig.getSetting('GoogleAnalyticsGATrackingID');
     var google_analyticsjs_tracking = variables.pluginConfig.getSetting('GoogleAnalyticsAJTrackingID');
+    var google_analyticsjs_extra = variables.pluginConfig.getSetting('GoogleAnalyticsJSExtras');
 
     if(google_gajs_tracking != ''){
       savecontent variable='gajs' { include 'inc/gajs.cfm'; }
