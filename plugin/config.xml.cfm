@@ -33,6 +33,12 @@
       <!--- <setting name="GoogleAnalyticsAJTrackingID" label="Google Analytics Tracking ID (analytics.js)" type="TextBox" required="false" /> --->
       <!--- <setting name="GoogleAnalyticsJSExtras" label="Google Analytics Extras" hint="This can be any commands associated with 'ga()'" type="TextBox" required="false" /> --->
       <setting>
+        <name>GoogleWebmasterVerification</name>
+        <label>Google Webmaster Verification Code</label>
+        <type>text</type>
+        <required>false</required>
+      </setting>
+      <setting>
         <name>GoogleAnalyticsGATrackingID</name>
         <label>Google Analytics Tracking ID (ga.js)</label>
         <type>text</type>

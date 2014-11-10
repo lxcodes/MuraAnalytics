@@ -11,9 +11,17 @@ component name='eventHandler' accessors='true' extends='mura.plugin.pluginGeneri
 
   public any function onRenderEnd(required struct $){
     var html = '';
+    var headHTML = '';
+    var newContent = $.event("__MuraResponse__");
     var google_gajs_tracking = variables.pluginConfig.getSetting('GoogleAnalyticsGATrackingID');
     var google_analyticsjs_tracking = variables.pluginConfig.getSetting('GoogleAnalyticsAJTrackingID');
     var google_analyticsjs_extra = variables.pluginConfig.getSetting('GoogleAnalyticsJSExtras');
+    var google_webmaster_verification = variables.pluginConfig.getSetting('GoogleWebmasterVerification');
+
+    if(google_webmaster_verification != ''){
+      savecontent variable='webmasterverify' { include 'inc/webmaster.cfm'; }
+      newContent = replaceNoCase(newContent, "</head>", headHTML & "</head>");
+    }
 
     if(google_gajs_tracking != ''){
       savecontent variable='gajs' { include 'inc/gajs.cfm'; }
@@ -26,7 +34,7 @@ component name='eventHandler' accessors='true' extends='mura.plugin.pluginGeneri
     }
 
     if(html != ''){
-      var newContent = replaceNoCase($.event("__MuraResponse__"), "</body>", html & "</body>");
+      newContent = replaceNoCase(newContent, "</body>", html & "</body>");
       $.event("__MuraResponse__", newContent);
     }
   }
