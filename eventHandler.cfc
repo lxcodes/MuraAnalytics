@@ -31,7 +31,7 @@ component name='eventHandler' accessors='true' extends='mura.plugin.pluginGeneri
 
     if(google_analyticsjs_tracking != ''){
       savecontent variable='analyticsjs' { include 'inc/analyticsjs.cfm'; }
-      html &= analyticsjs;
+      headHTML &= analyticsjs;
     }
 
     if(headHTML != ''){
